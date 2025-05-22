@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mindful Space</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-gray-50 text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+  <div class="fixed top-4 right-4 z-50">
+    <button id="gratitudeBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition">Show Gratitude Prompt</button>
+  </div>
+
+  
+  <div class="flex flex-col md:flex-row min-h-screen">
+    
+    <aside class="w-full md:w-64 bg-white dark:bg-gray-800 shadow-md p-6 rounded-b-3xl md:rounded-none md:rounded-r-3xl flex-shrink-0">
+      <h3 class="text-lg font-semibold mb-4 text-purple-700 dark:text-purple-300">Quick Help</h3>
+      <ul class="space-y-2">
+        <li><a href="https://www.mentalhealth.org.uk" target="_blank" class="text-purple-600 hover:underline dark:text-purple-300">Mental Health UK</a></li>
+        <li><a href="https://www.talkspace.com" target="_blank" class="text-purple-600 hover:underline dark:text-purple-300">Talkspace</a></li>
+        <li><a href="https://www.crisistextline.org" target="_blank" class="text-purple-600 hover:underline dark:text-purple-300">Crisis Text Line</a></li>
+      </ul>
+    </aside>
+
+    
+    <main class="flex-1 flex flex-col">
+     
+      <header class="bg-gradient-to-r from-purple-500 to-fuchsia-700 text-white rounded-b-3xl shadow-lg">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+          <h1 class="text-3xl font-bold tracking-tight mb-2 md:mb-0">Mindful Space</h1>
+          <nav>
+            <ul class="flex space-x-4">
+              <li><a href="https://psychcentral.com/blog" target="_blank" class="hover:bg-purple-700 px-3 py-1 rounded transition">Articles</a></li>
+              <li><a href="https://www.headspace.com/self-care" target="_blank" class="hover:bg-purple-700 px-3 py-1 rounded transition">Self-Care</a></li>
+              <li><a href="https://mentalhealth.gov/get-help/immediate-help" target="_blank" class="hover:bg-purple-700 px-3 py-1 rounded transition">Resources</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="container mx-auto px-4 py-8">
+        <div class="bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center shadow">
+          <h2 class="text-2xl md:text-3xl font-semibold mb-2">Your calm corner on the internet.</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300">Explore mindful tips, journaling ideas, and mental health support in one place.</p>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 text-center shadow mb-8">
+          <h2 class="text-xl font-semibold mb-2 text-purple-700 dark:text-purple-300">Mood of the Day</h2>
+          <div id="moodBox" class="text-lg font-medium">😌 Serene — Take it slow and steady today.</div>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-4 text-purple-700 dark:text-purple-300">Featured Journals</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform">
+            <div>
+              <h3 class="text-lg font-semibold mb-2">5-Minute Morning Reset</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">Start your day with clarity. These steps will ground you in under 5 minutes.</p>
+            </div>
+            <a href="https://www.mindful.org/morning-mindfulness-practices/" target="_blank" class="text-purple-600 dark:text-purple-300 font-semibold hover:underline">Read More</a>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform">
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Breathing Exercises That Work</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">A guide to 3 simple breathing techniques that can ease anxiety fast.</p>
+            </div>
+            <a href="https://www.healthline.com/health/breathing-exercise" target="_blank" class="text-purple-600 dark:text-purple-300 font-semibold hover:underline">Read More</a>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col justify-between hover:scale-105 transition-transform">
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Dealing with Burnout</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">Understanding burnout and practical ways to recover your energy and joy.</p>
+            </div>
+            <a href="https://www.helpguide.org/articles/stress/burnout-prevention-and-recovery.htm" target="_blank" class="text-purple-600 dark:text-purple-300 font-semibold hover:underline">Read More</a>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-4 text-purple-700 dark:text-purple-300">Self-Care Tips</h2>
+        <div class="space-y-4">
+          <div class="border border-purple-200 dark:border-purple-700 rounded-lg overflow-hidden">
+            <button class="accordion-button w-full text-left px-6 py-4 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 font-semibold focus:outline-none transition">Practice Digital Detox</button>
+            <div class="accordion-content px-6 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hidden">Take a break from screens for at least an hour a day. Go outside, read, or just sit in silence.</div>
+          </div>
+          <div class="border border-purple-200 dark:border-purple-700 rounded-lg overflow-hidden">
+            <button class="accordion-button w-full text-left px-6 py-4 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 font-semibold focus:outline-none transition">Create a Night Routine</button>
+            <div class="accordion-content px-6 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hidden">Having a consistent routine can improve your sleep and reduce anxiety before bed.</div>
+          </div>
+          <div class="border border-purple-200 dark:border-purple-700 rounded-lg overflow-hidden">
+            <button class="accordion-button w-full text-left px-6 py-4 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 font-semibold focus:outline-none transition">Journal Your Emotions</button>
+            <div class="accordion-content px-6 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hidden">Write out your thoughts without judgment. You’ll be surprised how freeing it feels.</div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="container mx-auto px-4 py-8">
+        <div class="bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center shadow mb-8">
+          <h2 class="text-2xl md:text-3xl font-semibold mb-2">Gratitude Prompt</h2>
+          <div id="gratitudeBox" class="text-lg font-medium text-purple-700 dark:text-purple-300">Click the button above for a gratitude prompt!</div>
+        </div>
+      </section>
+
+
+      <footer class="bg-gradient-to-r from-purple-500 to-fuchsia-700 text-white py-6 mt-8 rounded-t-3xl shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+          <p>© 2025 Mindful Space. Breathe easy ✨</p>
+        </div>
+      </footer>
+      
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
