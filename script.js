@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
   const accordionBtns = document.querySelectorAll('.accordion-button');
   accordionBtns.forEach(btn => {
